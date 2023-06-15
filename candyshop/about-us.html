@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Про нас</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-back">
+      <a href="./index.html"><i class="fa fa-arrow-circle-left icon"></i> </a>
+    </div>
+    <div class="container">
+      <div class="header-icons">
+        <a href="./index.html"> <i class="fa fa-home icon"></i></a>
+        <i class="fa fa-user icon" onclick="openAuthModal()"></i>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram icon"></i> </a>
+        <a href="https://www.facebook.com"><i class="fa fa-facebook icon"></i> </a>
+      </div>
+
+      <h1>Про нас</h1>
+
+
+      <ul class="categories">
+        <li data-category="all" class="active">Усі</li>
+        <li data-category="sweets">Солодощі</li>
+        <li data-category="shop">Магазин</li>
+        <li data-category="history">Історія</li>
+      </ul>
+    </div>
+  </header>
+
+  <div class="center-block">
+    <div class="product content sweets">
+      <p>Звітуючи про солодощі:</p>
+      <p>Ласощі, солодкі смаки та неперевершене задоволення - ось те, що надихає нас у нашому магазині солодощів.</p>
+      <p>Ми пропонуємо широкий вибір найсмачніших десертів, які точно задовольнять ваші солодкі бажання. Від традиційних
+        шоколадних цукерок до незвичайних ласощів з усього світу - у нас є все для того, щоб ви знайшли щось на свій
+        смак. Ми ретельно обираємо найкращі інгредієнти та співпрацюємо з майстрами своєї справи, щоб забезпечити
+        найвищу якість продукції.</p>
+      <p>У магазині солодощів ви зможете насолодитися вишуканими десертами і відчути радість в кожному шматочку
+        солодощів, які ви оберете.</p>
+    </div>
+
+    <div class="product content shop">
+      <p>Про наш магазин:
+
+      </p>
+      <p>Наш магазин солодощів - це місце, де солодкі фантазії стають реальністю. Ми створили неперевершене середовище,
+        де ви можете відчути себе справжнім гурманом і погрузитися у світ смаків.</p>
+      <p>Наша команда працює з посвяченням і відданістю, щоб забезпечити найвищий рівень обслуговування та зробити ваше
+        відвідування незабутнім. У нашому магазині ви будете зустрічатися з посмішками і дружелюбним персоналом, який з
+        радістю допоможе вам обрати ідеальний десерт або зробити подарунок для вашого близького.</p>
+      <p>Ми дбаємо про кожну деталь - від естетичного оформлення витрин до чистоти та комфорту всередині магазину.
+        Приходьте до нас і переконайтеся самі - у нашому магазині солодощів вас чекає незабутній досвід.
+      </p>
+    </div>
+
+    <div class="product content history">
+      <p>Наша історія:
+
+      </p>
+      <p>Наша історія почалася з маленької сімейної кондитерської, де кожна страва готувалася з любов'ю та увагою до
+        деталей. За роки роботи ми зрозуміли, що наша справжня пристрасть - це дарувати людям радість і задоволення
+        через смаколики. Тому ми вирішили розширити свої межі і відкрили магазин солодощів, де кожен може насолодитися
+        солодкими нагородами.</p>
+      <p>Наша команда створює унікальні рецепти, де поєднуються традиційні смаки зі сміливими новаторськими
+        експериментами. Ми пишаємося нашою спадщиною і завжди стежимо за останніми тенденціями у світі солодощів, щоб
+        радувати наших клієнтів найсмачнішими новинками.</p>
+      <p>Наша історія - це історія смаку і задоволення, яку ми раді поділитися з вами у нашому магазині.
+      </p>
+    </div>
+  </div>
+
+  <div class="auth-modal">
+    <div class="auth-modal-content">
+      <span class="auth-close" onclick="closeAuthModal()">&times;</span>
+      <form class="auth-form">
+        <h2>Авторизація/Реєстрація</h2>
+        <label for="email">Ім'я:</label>
+        <input type="text" id="name" required>
+        <label for="email">Логін:</label>
+        <input type="text" id="login" required>
+        <label for="password">Пароль:</label>
+        <input type="password" id="password" required>
+        <button id="submit-auth" type="submit">Увійти/Зареєструватися</button>
+      </form>
+    </div>
+  </div>
+
+  <button id="backToTopButton" class="back-to-top-button">
+    <i class="fa fa-arrow-right"></i>
+  </button>  
+
+  <script src="script.js"></script>
+</body>
+
+</html>

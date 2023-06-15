@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Онлайн-замовлення</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+  <header>
+    <div class="header-back">
+      <a href="./index.html"><i class="fa fa-arrow-circle-left icon"></i> </a>
+    </div>
+    <div class="container">
+      <div class="header-icons">
+        <a href="./index.html"> <i class="fa fa-home icon"></i></a>
+        <i class="fa fa-user icon" onclick="openAuthModal()"></i>
+        <a href="https://www.instagram.com/"><i class="fa fa-instagram icon"></i> </a>
+        <a href="https://www.facebook.com"><i class="fa fa-facebook icon"></i> </a>
+      </div>
+
+      <h1>Онлайн-замовлення</h1>
+
+
+      <ul class="categories">
+        <li data-category="all" class="active">Усі</li>
+        <li data-category="cakes">Торти</li>
+        <li data-category="cookies">Печиво</li>
+        <li data-category="chocolates">Шоколад</li>
+      </ul>
+    </div>
+  </header>
+
+  <main>
+    <section class="products">
+      <div class="container">
+        <h2>Наші солодощі</h2>
+
+        <div class="product cakes">
+          <img src="./img/tort1.png" alt="Торт 1">
+          <h3>Торт "Наполеон"</h3>
+          <p class="price">$10.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cakes">
+          <img src="./img/tort2.png" alt="Торт 2">
+          <h3>Торт "Чорний ліс"</h3>
+          <p class="price">$12.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cakes">
+          <img src="./img/tort3.png" alt="Торт 3">
+          <h3>Торт "Рафаелло"</h3>
+          <p class="price">$14.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cakes">
+          <img src="./img/tort4.png" alt="Торт 4">
+          <h3>Торт "Тірамісу"</h3>
+          <p class="price">$16.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cakes">
+          <img src="./img/tort5.png" alt="Торт 5">
+          <h3>Торт "Чізкейк"</h3>
+          <p class="price">$18.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+
+        <div class="product cookies">
+          <img src="./img/cookie1.png" alt="Печиво 1">
+          <h3>Печиво "Шоколадний чіпс"</h3>
+          <p class="price">$5.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cookies">
+          <img src="./img/cookie2.png" alt="Печиво 2">
+          <h3>Печиво "Масляне"</h3>
+          <p class="price">$7.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cookies">
+          <img src="./img/cookie3.png" alt="Печиво 3">
+          <h3>Печиво "Овсяне з цукровою глазур'ю"</h3>
+          <p class="price">$9.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cookies">
+          <img src="./img/cookie4.png" alt="Печиво 4">
+          <h3>Печиво "Джинджербред"</h3>
+          <p class="price">$11.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product cookies">
+          <img src="./img/cookie5.png" alt="Печиво 5">
+          <h3>Печиво "М'ятне"</h3>
+          <p class="price">$13.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+
+        <div class="product chocolates">
+          <img src="./img/chocolate1.png" alt="Шоколад 1">
+          <h3>Шоколад "Молочний"</h3>
+          <p class="price">$2.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product chocolates">
+          <img src="./img/chocolate2.png" alt="Шоколад 2">
+          <h3>Шоколад "Гіркий"</h3>
+          <p class="price">$4.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product chocolates">
+          <img src="./img/chocolate3.png" alt="Шоколад 3">
+          <h3>Шоколад "Апельсиновий"</h3>
+          <p class="price">$6.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product chocolates">
+          <img src="./img/chocolate4.png" alt="Шоколад 4">
+          <h3>Шоколад "Мигдальний"</h3>
+          <p class="price">$8.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+        <div class="product chocolates">
+          <img src="./img/chocolate5.png" alt="Шоколад 5">
+          <h3>Шоколад "М'ятний"</h3>
+          <p class="price">$10.99</p>
+          <button class="add-to-cart">Додати до кошика</button>
+        </div>
+      </div>
+
+    </section>
+
+    <div class="cart">
+      <h2>Кошик</h2>
+      <div class="cart-items">
+      </div>
+      <button class="clear-cart">Очистити кошик</button>
+
+      <button class="order-button">Замовити</button>
+    </div>
+
+    <div class="overlay">
+      <div class="order-window">
+        <h2>Замовлення</h2>
+        <p class="before-input">Ваше ім'я:</p>
+        <input type="text" name="name">
+        <p class="before-input">Ваш телефон:</p>
+        <input type="tel" name="tel">
+        <p class="before-input">Адреса доставки:</p>
+        <input type="text" name="adress"> 
+        <h3>Ваше замовлення:</h3>
+        <div class="order-items">
+        </div>
+      <p class="total">Загальна сума: $0.00</p>
+        
+        <button class="close-window">Закрити</button>
+        <a href="https://www.peremoga-ukraine.org/ua/donate"><button class="order-window-btn">Оплатити</button></a>
+
+      </div>
+    </div>
+
+    <div class="auth-modal">
+      <div class="auth-modal-content">
+        <span class="auth-close" onclick="closeAuthModal()">&times;</span>
+        <form class="auth-form">
+          <h2>Авторизація/Реєстрація</h2>
+          <label for="email">Ім'я:</label>
+          <input type="text" id="name" required>
+          <label for="email">Логін:</label>
+          <input type="text" id="login" required>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" required>
+          <button id="submit-auth" type="submit">Увійти/Зареєструватися</button>
+        </form>
+      </div>
+    </div>
+
+    <button id="backToTopButton" class="back-to-top-button">
+      <i class="fa fa-arrow-right"></i>
+    </button>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
