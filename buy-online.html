@@ -18,6 +18,7 @@
     <div class="container">
       <div class="header-icons">
         <a href="./index.html"> <i class="fa fa-home icon"></i></a>
+        <i class="fa fa-user icon" onclick="openAuthModal()"></i>
         <a href="https://www.instagram.com/"><i class="fa fa-instagram icon"></i> </a>
         <a href="https://www.facebook.com"><i class="fa fa-facebook icon"></i> </a>
       </div>
@@ -161,6 +162,22 @@
         <button class="close-window">Закрити</button>
         <a href="https://www.peremoga-ukraine.org/ua/donate"><button class="order-window-btn">Оплатити</button></a>
 
+      </div>
+    </div>
+
+    <div class="auth-modal">
+      <div class="auth-modal-content">
+        <span class="auth-close" onclick="closeAuthModal()">&times;</span>
+        <form class="auth-form">
+          <h2>Авторизація/Реєстрація</h2>
+          <label for="email">Ім'я:</label>
+          <input type="text" id="name" required>
+          <label for="email">Логін:</label>
+          <input type="text" id="login" required>
+          <label for="password">Пароль:</label>
+          <input type="password" id="password" required>
+          <button id="submit-auth" type="submit">Увійти/Зареєструватися</button>
+        </form>
       </div>
     </div>
 

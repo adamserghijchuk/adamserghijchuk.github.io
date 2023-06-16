@@ -1,5 +1,12 @@
 var cartTotal = 0;
+const authForm = document.querySelector('.auth-form');
+const authModal = document.querySelector('.auth-modal');
 const orderItemsParent = document.querySelector('.order-items');
+authForm.addEventListener('submit', handleFormSubmit);
+
+function handleFormSubmit(event) {
+  event.preventDefault();
+}
 document.addEventListener("DOMContentLoaded", function () {
   const addToCartButtons = document.querySelectorAll(".add-to-cart");
   const cartItems = document.querySelector(".cart-items");
@@ -67,6 +74,68 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+// auth
+
+let name = document.querySelector('#name');
+let login = document.querySelector('#login');
+let password = document.querySelector('#password');
+let submitAuth = document.querySelector('#submit-auth');
+
+let users = {};
+
+function User(name, login, password) {
+  this.name = name;
+  this.login = login;
+  this.password = password;
+}
+
+function createId(users) {
+  return Object.keys(users).length;
+}
+
+submitAuth.addEventListener('click', (event) => {
+  event.preventDefault(); 
+  const nameUser = name.value;
+  const loginUser = login.value;
+  const passwordUser = password.value;
+
+  const userId = Object.keys(users).find((id) => users[id].login === loginUser);
+
+  if (userId) {
+    if (users[userId].password === passwordUser) {
+      alert('Ви успішно авторизувалися!');
+      closeAuthModal();
+      clearAuthModal();
+    } else {
+      alert('Неправильний пароль!');
+    }
+  } else {
+    const user = new User(nameUser, loginUser, passwordUser);
+    const newUserId = 'User' + createId(users);
+    users[newUserId] = user;
+    alert('Ви успішно зареєструвалися!');
+    closeAuthModal();
+    clearAuthModal();
+  }
+  console.log(users);
+});
+
+function clearAuthModal(){
+  name.value = '';
+  login.value = '';
+  password.value = '';
+}
+
+function openAuthModal() {
+  authModal.style.display = 'block';
+}
+
+function closeAuthModal() {
+  authModal.style.display = 'none';
+}
+
+// auth
+
 const clearCartButton = document.querySelector('.clear-cart');
 clearCartButton.addEventListener('click', () => {
   const cartItems = document.querySelector('.cart-items');
@@ -115,7 +184,7 @@ function updateCartItemsTotal() {
 const inputs = document.querySelectorAll('input');
 
 inputs.forEach(input => {
-  input.addEventListener('input', function() {
+  input.addEventListener('input', function () {
     if (input.value.trim() !== '') {
       input.classList.add('success');
     } else {
